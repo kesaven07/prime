@@ -39,7 +39,7 @@ const Careers = () => {
         perks={careerPerks}
       />
       <CTA
-        imagePath='/images/footer1.svg'
+        imagePath='/images/new_home.svg'
         text={
           <>
             <Text

@@ -48,7 +48,7 @@ export default function Home() {
       <CTA
         text='We believe great things can start with a conversation. We would love to hear from you.'
         showButton
-        imagePath='/images/footer2.svg'
+        imagePath='/images/new_home.svg'
       />
       <Footer />
     </>

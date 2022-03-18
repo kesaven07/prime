@@ -151,9 +151,7 @@ const Footer = () => {
                     work and commitment to making a real difference, our
                     organization has grown in scale and diversity—approximately
                     286,000 people in 150 countries and territories, providing
-                    these services—yet our shared culture remains the same. Our
-                    organization serves four out of five Fortune Global 500
-                    companies.
+                    these services—yet our shared culture remains the same.
                   </Text>
                 </dd>
               </span>

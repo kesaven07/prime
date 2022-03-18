@@ -43,7 +43,7 @@ const SOC = () => {
       <CTA
         text='We believe great things can start with a conversation. We would love to hear from you.'
         showButton
-        imagePath='/images/footer1.svg'
+        imagePath='/images/new_home.svg'
         css={{
           '@bp7': {
             paddingTop: 0,
