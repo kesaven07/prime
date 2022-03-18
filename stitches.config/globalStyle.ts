@@ -4,12 +4,12 @@ export default {
   ...normalize,
   '@font-face': [
     {
-      fontFamily: 'sora',
+      fontFamily: 'Poppins',
       src: `
-        local('Sora Light'), local('Sora-Light'),
-        url('/fonts/sora_light.woff2') format('woff2'),
-        url('/fonts/sora_light.woff') format('woff'),
-        url('/fonts/sora_light.ttf') format('truetype')
+        local('Poppins Light'), local('Poppins-Light'),
+        url('/fonts/Poppins-Black.ttf') format('truetype')
+        url('/fonts/Poppins-Light.ttf') format('truetype')
+        url('/fonts/Poppins-Regular.ttf') format('truetype')
       `,
       fontWeight: 'normal',
       fontStyle: 'normal',
@@ -18,12 +18,14 @@ export default {
       unicodeRange: 'U+0020-2044',
     },
     {
-      fontFamily: 'sora',
+      fontFamily: 'Poppins',
       src: `
-        local('Sora Semibold'), local('Sora-SemiBold'),
-        url('/fonts/sora_semibold.woff2') format('woff2'),
-        url('/fonts/sora_semibold.woff') format('woff'),
-        url('/fonts/sora_semibold.ttf') format('truetype')
+        local('Poppins Semibold'), local('Poppins-SemiBold'),
+        url('/fonts/Poppins-Black.ttf') format('truetype')
+        url('/fonts/Poppins-Light.ttf') format('truetype')
+        url('/fonts/Poppins-Regular.ttf') format('truetype')
+        
+
       `,
       fontWeight: 'bold',
       fontStyle: 'normal',
