@@ -18,7 +18,7 @@ const AwardFile = [
   {
     title: 'Startup India',
     imageURL:
-      'https://res.cloudinary.com/djck1safr/image/upload/v1647608831/png-clipart-government-of-india-startup-india-startup-company-entrepreneurship-india-company-text_xlboat.png',
+      'https://res.cloudinary.com/djck1safr/image/upload/v1647623994/PF_-LOGO_sgujaa.png',
   },
   {
     title: 'Entrepreneurs Council of India',
