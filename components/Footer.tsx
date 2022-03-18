@@ -92,8 +92,7 @@ const StyledLink = styled('a', {
 
   '&:hover': {
     textDecoration: 'underline',
-
-  }
+  },
 });
 
 const Footer = () => {
@@ -125,11 +124,11 @@ const Footer = () => {
   });
 
   return (
-    <Layout css={{ }}>
+    <Layout css={{}}>
       <Container>
         <Link href='/'>
           <a>
-            <StyledLogoFull css={{ marginBottom: '$3'}} />
+            <StyledLogoFull css={{ marginBottom: '$3' }} />
           </a>
         </Link>
         <Flex
@@ -138,17 +137,23 @@ const Footer = () => {
           css={{ '@bp6': { flexDirection: 'column' } }}
         >
           <div>
-            
             <ContactDetailList>
               <span data-vertical className='group'>
-                
                 <dd>
                   <Text
                     as='a'
                     type='b4'
-                    css={{fontSize: '12px', lineHeight: '2px'}}
+                    css={{ fontSize: '12px', lineHeight: '2px' }}
                   >
-                    Deloitte is a leading global provider of audit and assurance, consulting, financial advisory, risk advisory, tax, and related services. With more than 150 years of hard work and commitment to making a real difference, our organization has grown in scale and diversity—approximately 286,000 people in 150 countries and territories, providing these services—yet our shared culture remains the same. Our organization serves four out of five Fortune Global 500 companies.
+                    Deloitte is a leading global provider of audit and
+                    assurance, consulting, financial advisory, risk advisory,
+                    tax, and related services. With more than 150 years of hard
+                    work and commitment to making a real difference, our
+                    organization has grown in scale and diversity—approximately
+                    286,000 people in 150 countries and territories, providing
+                    these services—yet our shared culture remains the same. Our
+                    organization serves four out of five Fortune Global 500
+                    companies.
                   </Text>
                 </dd>
               </span>
@@ -158,12 +163,13 @@ const Footer = () => {
                 </FooterHeading> */}
                 <dd></dd>
               </span>
-              
             </ContactDetailList>
           </div>
           <ServicesContainer css={{ marginTop: -70, width: '33rem' }}>
-            <FooterHeading as='h3' css={{ marginBottom: '$space$4', fontSize: '14px' }}>
-              
+            <FooterHeading
+              as='h3'
+              css={{ marginBottom: '$space$4', fontSize: '14px' }}
+            >
               Services
             </FooterHeading>
             <FooterLinkList>
@@ -171,7 +177,9 @@ const Footer = () => {
                 <li key={path}>
                   <Link href={path}>
                     <StyledLink href={path}>
-                      <Text type='b4' css={{fontSize: '12px' }}>{title}</Text>
+                      <Text type='b4' css={{ fontSize: '12px' }}>
+                        {title}
+                      </Text>
                     </StyledLink>
                   </Link>
                 </li>
@@ -179,7 +187,10 @@ const Footer = () => {
             </FooterLinkList>
           </ServicesContainer>
           <AboutContainer css={{ marginTop: -70, width: '13rem' }}>
-            <FooterHeading as='h3' css={{ marginBottom: '$space$4', fontSize: '14px' }}>
+            <FooterHeading
+              as='h3'
+              css={{ marginBottom: '$space$4', fontSize: '14px' }}
+            >
               About Us
             </FooterHeading>
             <FooterLinkList>
@@ -187,7 +198,9 @@ const Footer = () => {
                 <li key={title}>
                   <Link href={path}>
                     <StyledLink href={path}>
-                      <Text type='b4' css={{fontSize: '12px' }}>{title}</Text>
+                      <Text type='b4' css={{ fontSize: '12px' }}>
+                        {title}
+                      </Text>
                     </StyledLink>
                   </Link>
                 </li>
@@ -200,7 +213,7 @@ const Footer = () => {
               border
               text='Contact Us'
               icon={RightArrow}
-              css={{ marginBottom: '$5', fontSize: '12px'}}
+              css={{ marginBottom: '$5', fontSize: '12px' }}
             />
             <Flex as='ul' spaceBetweenCenter css={{ maxWidth: '180px' }}>
               {socialIcons}
@@ -210,7 +223,7 @@ const Footer = () => {
                 <FooterHeading
                   className='address'
                   as='dt'
-                  css={{ marginBottom: '$space$4' ,fontSize: '14px' }}
+                  css={{ marginBottom: '$space$4', fontSize: '14px' }}
                 >
                   Headquarters
                 </FooterHeading>
@@ -219,7 +232,7 @@ const Footer = () => {
                     as='a'
                     href={contact.location.chennai.locationLink}
                     type='b4'
-                    css={{fontSize: '12px' }}
+                    css={{ fontSize: '12px' }}
                   >
                     {contact.location.chennai.address}
                   </Text>
@@ -232,11 +245,19 @@ const Footer = () => {
                 <dd></dd>
               </span>
               <span data-horizontal className='group'>
-                <FooterHeading as='dt' css={{ marginBottom: '$space$4', fontSize: '14px' }}>
+                <FooterHeading
+                  as='dt'
+                  css={{ marginBottom: '$space$4', fontSize: '14px' }}
+                >
                   Email
                 </FooterHeading>
                 <dd>
-                  <Text as='a' type='b4' href={`mailto:${contact.emails.info}`}  css={{fontSize: '12px' }}>
+                  <Text
+                    as='a'
+                    type='b4'
+                    href={`mailto:${contact.emails.info}`}
+                    css={{ fontSize: '12px' }}
+                  >
                     {contact.emails.info}
                   </Text>
                 </dd>
@@ -244,12 +265,22 @@ const Footer = () => {
             </ContactDetailList>
           </div>
         </Flex>
-        <div css={{whiteSpace: 'nowrap'}}>
-        <Text as='p' type='b5' css={{ marginTop: '$3', textAlign: 'center',  fontSize: '12px'}}>
-          Privacy Policy | Website Privacy Policy
-        </Text>
+        <div style={{ whiteSpace: 'nowrap' }}>
+          <Text
+            as='p'
+            type='b5'
+            css={{ marginTop: '$3', textAlign: 'center', fontSize: '12px' }}
+          >
+            <Link href='##'>
+              <a> Privacy Policy | Website Privacy Policy</a>
+            </Link>{' '}
+          </Text>
         </div>
-        <Text as='p' type='b5' css={{ marginTop: '$3', textAlign: 'center',  fontSize: '12px' }}>
+        <Text
+          as='p'
+          type='b5'
+          css={{ marginTop: '$3', textAlign: 'center', fontSize: '12px' }}
+        >
           © Copyright - Primefort
         </Text>
       </Container>
