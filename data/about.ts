@@ -22,6 +22,6 @@ export default {
   awards: {
     title: 'Awards',
     path: '/about#awards',
-    description: 'Award that deliver best',
+    description: 'Celebrating success and excellence',
   },
 };
