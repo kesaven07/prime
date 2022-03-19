@@ -126,6 +126,11 @@ export const Text = styled('span', {
           fontSize: '$2',
         },
       },
+      button2: {
+        fontSize: '$1',
+        lineHeight: '100%',
+        textTransform: 'uppercase',
+      },
     },
     lineHeight100: {
       true: {

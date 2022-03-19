@@ -49,6 +49,16 @@ const Container = styled('a', {
         },
       },
     },
+    small: {
+      true: {
+        padding: '1rem 2rem',
+        svg: {
+          fill: '$$color',
+          width: '2rem',
+          height: '2rem',
+        },
+      },
+    },
   },
 
   '&:hover': {
@@ -65,6 +75,7 @@ type ButtonProps = {
   border?: boolean;
   icon?: React.FunctionComponent;
   underline?: boolean;
+  small?: boolean;
   css?: CSS;
 };
 
@@ -75,6 +86,7 @@ export const Button = ({
   border,
   icon,
   underline,
+  small,
   css,
 }: ButtonProps) => {
   const Icon = icon;
@@ -85,13 +97,14 @@ export const Button = ({
         border={border}
         icon={!!icon}
         underline={underline}
+        small={small}
         css={{ ...css, color }}
         href={href}
       >
         {border && <span className='leftLine'></span>}
         <Text
           className='buttonText'
-          type='button1'
+          type={small ? 'button2' : 'button1'}
           weight='bold'
           css={{ minWidth: 'max-content' }}
         >

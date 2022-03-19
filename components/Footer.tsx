@@ -207,6 +207,7 @@ const Footer = () => {
           <div style={{ marginTop: '-70px' }}>
             <Button
               href={pages.contact.path}
+              small
               border
               text='Contact Us'
               icon={RightArrow}

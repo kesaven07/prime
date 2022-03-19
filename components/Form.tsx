@@ -115,7 +115,6 @@ const Form = () => {
           left: '50%',
           position: 'relative',
           marginLeft: 'auto',
-          // marginTop: '$6'
         }}
       />
     </FormContainer>
