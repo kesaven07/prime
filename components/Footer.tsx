@@ -93,6 +93,7 @@ const StyledLink = styled('a', {
     position: 'absolute',
     content: '',
     display: 'block',
+    bottom: '-3px',
     width: '100%',
     height: '1px',
     marginTop: '.25rem',
