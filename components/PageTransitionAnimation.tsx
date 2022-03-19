@@ -18,7 +18,7 @@ const StyledDiv = styled(motion.div, {
   left: 0,
   width: '100px',
   height: '100vh',
-  backgroundColor: 'red',
+  backgroundColor: '$accenta600',
   zIndex: 99999,
 });
 

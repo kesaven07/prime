@@ -1,49 +1,34 @@
-import React from 'react';
-import styled from 'styled-components';
-import { Button, Typography } from '@mui/material';
-import Image from 'next/image';
+import SectionContainer from 'elements/SectionContainer';
+import Layout from 'elements/Layout';
+import { styled } from 'stitches.config';
+import AwardCard from 'components/AwardCard';
+import { Text } from 'elements/Text';
+import CardGrid from 'elements/CardGrid';
 
-const DsCard = styled.div`
-  width: 19em;
-  height: 20em;
-  background-color: #fff;
-  border-radius: 12px;
-  box-shadow: 0 10px 30px rgb(75 131 252 / 10%);
-  position: relative;
+const Container = styled(SectionContainer);
 
-  .image_award {
-    width: 100%;
-    height: auto;
-    border-radius: 12px;
-  }
-  .flexCenter {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    position: absolute;
-    bottom: 0;
-    width: 100%;
-    min-height: 5em;
-  }
-`;
-const Awards = ({ item }) => {
-  const { imageURL, title } = item;
+const AwardsContainer = styled('ul');
+
+const Awards = ({ id, title, awards }) => {
   return (
-    <>
-      <DsCard>
-        <img className='image_award' src={imageURL} alt='award_photo' />
-        <div className='flexCenter'>
-          <Typography
-            variant='h5'
-            color='rgba(0,0,0,.6)'
-            fontWeight='800'
-            textAlign='center'
-          >
-            {title}
-          </Typography>
-        </div>
-      </DsCard>
-    </>
+    <Container id={id}>
+      <Layout>
+        <Text as='h2' type='h4' css={{ textAlign: 'center' }}>
+          {title}
+        </Text>
+        <CardGrid minWidth='265px' gap='$9' css={{ marginTop: '$15' }}>
+          {awards?.map((item, i) => {
+            return (
+              <AwardCard
+                title={item.title}
+                imagePath={item.imagePath}
+                key={i}
+              />
+            );
+          })}
+        </CardGrid>
+      </Layout>
+    </Container>
   );
 };
 

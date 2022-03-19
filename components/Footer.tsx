@@ -53,8 +53,8 @@ const ContactDetailList = styled('dl', {
   'dt, dl, dd': {
     margin: 0,
   },
-  span: {
-    display: 'flex',
+
+  div: {
     maxWidth: '380px',
   },
   '[data-vertical]': {
@@ -86,12 +86,25 @@ const AboutContainer = styled('div', {
 });
 
 const StyledLink = styled('a', {
+  position: 'relative',
   cursor: 'pointer',
-  transition: 'all ease-in-out 1s',
-  display: 'block',
 
+  '&:after': {
+    position: 'absolute',
+    content: '',
+    display: 'block',
+    width: '100%',
+    height: '1px',
+    marginTop: '.25rem',
+    background: 'currentColor',
+    transform: 'scaleX(0)',
+    transformOrigin: 'left',
+    transition: 'transform .2s cubic-bezier(.4,.6,.6,1)',
+  },
   '&:hover': {
-    textDecoration: 'underline',
+    '&:after': {
+      transform: 'scaleX(1)',
+    },
   },
 });
 
@@ -111,7 +124,7 @@ const Footer = () => {
     const Icon = styled(icon, {
       width: '32px',
       height: '32px',
-      fill: '$secondary200',
+      fill: '$white',
     });
 
     return (
@@ -138,13 +151,9 @@ const Footer = () => {
         >
           <div>
             <ContactDetailList>
-              <span data-vertical className='group'>
+              <div data-vertical className='group'>
                 <dd>
-                  <Text
-                    as='a'
-                    type='b4'
-                    css={{ fontSize: '12px', lineHeight: '2px' }}
-                  >
+                  <Text type='b6'>
                     Deloitte is a leading global provider of audit and
                     assurance, consulting, financial advisory, risk advisory,
                     tax, and related services. With more than 150 years of hard
@@ -154,13 +163,7 @@ const Footer = () => {
                     these services—yet our shared culture remains the same.
                   </Text>
                 </dd>
-              </span>
-              <span data-horizontal className='group'>
-                {/* <FooterHeading as='dt' css={{ marginBottom: '$space$4' }}>
-                  Phone
-                </FooterHeading> */}
-                <dd></dd>
-              </span>
+              </div>
             </ContactDetailList>
           </div>
           <ServicesContainer css={{ marginTop: -70, width: '33rem' }}>
@@ -175,9 +178,7 @@ const Footer = () => {
                 <li key={path}>
                   <Link href={path}>
                     <StyledLink href={path}>
-                      <Text type='b4' css={{ fontSize: '12px' }}>
-                        {title}
-                      </Text>
+                      <Text type='b6'>{title}</Text>
                     </StyledLink>
                   </Link>
                 </li>
@@ -196,9 +197,7 @@ const Footer = () => {
                 <li key={title}>
                   <Link href={path}>
                     <StyledLink href={path}>
-                      <Text type='b4' css={{ fontSize: '12px' }}>
-                        {title}
-                      </Text>
+                      <Text type='b6'>{title}</Text>
                     </StyledLink>
                   </Link>
                 </li>
@@ -211,13 +210,13 @@ const Footer = () => {
               border
               text='Contact Us'
               icon={RightArrow}
-              css={{ marginBottom: '$5', fontSize: '12px' }}
+              css={{ marginBottom: '$5' }}
             />
             <Flex as='ul' spaceBetweenCenter css={{ maxWidth: '180px' }}>
               {socialIcons}
             </Flex>
             <ContactDetailList>
-              <span data-vertical className='group'>
+              <div data-vertical className='group'>
                 <FooterHeading
                   className='address'
                   as='dt'
@@ -229,20 +228,13 @@ const Footer = () => {
                   <Text
                     as='a'
                     href={contact.location.chennai.locationLink}
-                    type='b4'
-                    css={{ fontSize: '12px' }}
+                    type='b6'
                   >
                     {contact.location.chennai.address}
                   </Text>
                 </dd>
-              </span>
-              <span data-horizontal className='group'>
-                {/* <FooterHeading as='dt' css={{ marginBottom: '$space$4' }}>
-                  Phone
-                </FooterHeading> */}
-                <dd></dd>
-              </span>
-              <span data-horizontal className='group'>
+              </div>
+              <div data-horizontal className='group'>
                 <FooterHeading
                   as='dt'
                   css={{ marginBottom: '$space$4', fontSize: '14px' }}
@@ -250,35 +242,22 @@ const Footer = () => {
                   Email
                 </FooterHeading>
                 <dd>
-                  <Text
-                    as='a'
-                    type='b4'
-                    href={`mailto:${contact.emails.info}`}
-                    css={{ fontSize: '12px' }}
-                  >
+                  <Text as='a' type='b6' href={`mailto:${contact.emails.info}`}>
                     {contact.emails.info}
                   </Text>
                 </dd>
-              </span>
+              </div>
             </ContactDetailList>
           </div>
         </Flex>
         <div style={{ whiteSpace: 'nowrap' }}>
-          <Text
-            as='p'
-            type='b5'
-            css={{ marginTop: '$3', textAlign: 'center', fontSize: '12px' }}
-          >
-            <Link href='##'>
+          <Text as='p' type='b6' css={{ marginTop: '$3', textAlign: 'center' }}>
+            <Link href='#'>
               <a> Privacy Policy | Website Privacy Policy</a>
-            </Link>{' '}
+            </Link>
           </Text>
         </div>
-        <Text
-          as='p'
-          type='b5'
-          css={{ marginTop: '$3', textAlign: 'center', fontSize: '12px' }}
-        >
+        <Text as='p' type='b6' css={{ marginTop: '$3', textAlign: 'center' }}>
           © Copyright - Primefort
         </Text>
       </Container>

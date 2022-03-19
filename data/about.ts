@@ -23,5 +23,22 @@ export default {
     title: 'Awards',
     path: '/about#awards',
     description: 'Celebrating success and excellence',
+    items: [
+      {
+        title: 'Startup India',
+        imagePath:
+          'https://res.cloudinary.com/djck1safr/image/upload/v1647631711/startup-india-1280x720.jpeg_wthn3z.jpg',
+      },
+      {
+        title: 'Entrepreneurs Council of India',
+        imagePath:
+          'https://res.cloudinary.com/djck1safr/image/upload/v1647608831/Entrepreneurs_council_of_india_neard2.jpg',
+      },
+      {
+        title: 'NCDRC - Corner Stone Award',
+        imagePath:
+          'https://res.cloudinary.com/djck1safr/image/upload/v1647608832/ncdrc-logo_qofpls.png',
+      },
+    ],
   },
 };

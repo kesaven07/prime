@@ -4,6 +4,13 @@ import { styled } from 'stitches.config';
 import Link from 'next/link';
 import ChevronRight from 'public/images/icons/chevron_right.svg';
 
+const StyledChevronRight = styled(ChevronRight, {
+  display: 'inline-block',
+  fill: 'white',
+  verticalAlign: 'middle',
+  transition: 'margin-left ease-in-out 0.25s',
+});
+
 const NavDropdownItem = ({
   title,
   description,
@@ -17,14 +24,6 @@ const NavDropdownItem = ({
   icon?: React.FunctionComponent;
   color?: string;
 }) => {
-
-  const StyledChevronRight = styled(ChevronRight, {
-    display: 'inline-block',
-    fill: 'white',
-    verticalAlign: 'middle',
-    transition: 'margin-left ease-in-out 0.25s',
-  });
-  
   const Icon = styled(icon, {
     fill: color,
     width: '66px',
@@ -35,17 +34,29 @@ const NavDropdownItem = ({
 
   const StyleTitleText = styled(Text, {
     cursor: 'pointer',
-    
+
     '&:hover': {
       '& svg': {
-        marginLeft: '7px'
+        marginLeft: '7px',
+      },
+    },
+  });
+
+  const StyledLink = styled('a', {
+    '.chevron-right': {
+      transition: 'transform .1s ease-in-out',
+    },
+
+    '&:hover': {
+      '.chevron-right': {
+        transform: 'translateX(5px)',
       },
     },
   });
 
   return (
     <Link href={path}>
-      <a href={path}>
+      <StyledLink href={path} css={{}}>
         <Flex gap='$4' css={{ maxWidth: '360px' }}>
           {icon && <Icon />}
           <div>
@@ -53,9 +64,17 @@ const NavDropdownItem = ({
               as='p'
               type='b4'
               weight='bold'
-              css={{ marginBottom: '$1', color: '$primary100' }}
+              css={{
+                marginBottom: '$1',
+                color: '$primary100',
+              }}
             >
-              {title} <StyledChevronRight width='20px' height='px' />
+              {title}{' '}
+              <StyledChevronRight
+                className='chevron-right'
+                width='16px'
+                height='16px'
+              />
             </Text>
             {description && (
               <Text as='p' type='b5' css={{ color: '$primary200' }}>
@@ -64,7 +83,7 @@ const NavDropdownItem = ({
             )}
           </div>
         </Flex>
-      </a>
+      </StyledLink>
     </Link>
   );
 };

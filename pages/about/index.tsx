@@ -10,27 +10,10 @@ import Journey from 'components/About/Journey';
 import Media from 'components/About/Media';
 import { styled } from 'stitches.config';
 import Awards from 'components/About/Awards';
-import { Typography } from '@mui/material';
+import about from 'data/about';
 
 const Container = styled('div');
 
-const AwardFile = [
-  {
-    title: 'Startup India',
-    imageURL:
-      'https://res.cloudinary.com/djck1safr/image/upload/v1647631711/startup-india-1280x720.jpeg_wthn3z.jpg',
-  },
-  {
-    title: 'Entrepreneurs Council of India',
-    imageURL:
-      'https://res.cloudinary.com/djck1safr/image/upload/v1647608831/Entrepreneurs_council_of_india_neard2.jpg',
-  },
-  {
-    title: 'NCDRC - Corner Stone Award',
-    imageURL:
-      'https://res.cloudinary.com/djck1safr/image/upload/v1647608832/ncdrc-logo_qofpls.png',
-  },
-];
 export default function About() {
   return (
     <Container css={{ position: 'relative', overflowX: 'hidden' }}>
@@ -63,30 +46,11 @@ export default function About() {
         title='Meet the Leadership Team'
         team={team}
       />
-      {/* AWARDS */}
-      <Typography
-        variant='h3'
-        fontWeight='400'
-        textAlign='center'
-        marginTop='3em'
-      >
-        Awards
-      </Typography>
-      <div
+      <Awards
         id='awards'
-        style={{
-          display: 'flex',
-          justifyContent: 'space-evenly',
-          alignItems: 'center',
-          marginTop: '3em',
-          flexWrap: 'wrap',
-        }}
-      >
-        {' '}
-        {AwardFile.map((item, i) => {
-          return <Awards item={item} key={i} />;
-        })}
-      </div>
+        title={about.awards.title}
+        awards={about.awards.items}
+      />
       <Journey
         id='our-journey'
         title='Our Journey so far'

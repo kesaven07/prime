@@ -5,7 +5,9 @@ import { Text } from 'elements/Text';
 import ResponsiveFlex from 'elements/ResponsiveFlex';
 import Image from 'next/image';
 
-const Container = styled(SectionContainer, {});
+const Container = styled(SectionContainer, {
+  overflow: 'hidden',
+});
 
 const TextContainer = styled('div');
 

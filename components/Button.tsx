@@ -52,11 +52,10 @@ const Container = styled('a', {
   },
 
   '&:hover': {
-    backgroundColor: 'white',
-    color: 'black',
-    transition: 'all .4s linear'
-  }
-
+    backgroundColor: '$secondary100',
+    color: '$secondary800',
+    transition: 'all .2s ease-out',
+  },
 });
 
 type ButtonProps = {

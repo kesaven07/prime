@@ -53,22 +53,26 @@ const HamburgerMenu = styled('button', {
 const StyledExternalLink = styled('a');
 
 const StyledListItem = styled('li', {
+  position: 'relative',
   cursor: 'pointer',
-  transition: 'border-width 0.6s linear',
+
   '&:after': {
-    content: " ",
+    position: 'absolute',
+    content: ' ',
     display: 'block',
-    width: '0',
+    width: '100%',
+    transform: 'scaleX(0)',
     height: '1px',
     marginTop: '.25rem',
     background: 'currentColor',
-    transition: 'width .5s cubic-bezier(.4,.6,.6,1)',
+    transition: 'transform .2s cubic-bezier(.4,.6,.6,1)',
+    transformOrigin: 'left',
   },
   '&:hover': {
     '&:after': {
-      width: '100%'
-    }
-  }
+      transform: 'scaleX(1)',
+    },
+  },
 });
 
 const NavListItem = ({ name, path, dropdownItems, isExternal }) => {
