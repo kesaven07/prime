@@ -34,8 +34,9 @@ const Intro = ({ text, imagePath, benefits }) => {
                   className='image'
                   data={imagePath}
                   style={{
-                      width: '500px',
+                      width: '300px',
                       height: '300px',
+                      top:'2px',
                       objectFit: 'contain',
                   }}
               ></object>

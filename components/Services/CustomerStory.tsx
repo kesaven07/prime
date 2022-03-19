@@ -27,7 +27,7 @@ const CustomerStory = ({ title, text, imagePath }) => {
                 className='image'
                 data={imagePath}
                 style={{
-                  width: '500px',
+                  width: '300px',
                   height: '300px',
                   objectFit: 'contain',
                 }}
