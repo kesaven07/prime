@@ -2,6 +2,7 @@ import { CSS, styled } from 'stitches.config';
 import { Text } from 'elements/Text';
 import ChevronRight from 'public/images/icons/chevron_right.svg';
 import Link from 'next/link';
+import Image from 'next/image';
 
 const Card = styled('div', {
   display: 'flex',
@@ -10,10 +11,6 @@ const Card = styled('div', {
   maxWidth: '390px',
   width: '100%',
   minHeight: '116px',
-  backgroundImage: '$$imageUrl',
-  backgroundRepeat: 'no-repeat',
-  backgroundSize: 'cover',
-  backgroundPosition: 'center',
   color: '$white',
   zIndex: 1,
 
@@ -54,6 +51,11 @@ const StyledLink = styled('a', {
   width: '100%',
   padding: '27px 30px',
   gap: '12px',
+  zIndex: 1,
+});
+
+const StyledImage = styled(Image, {
+  zIndex: -2,
 });
 
 const ServiceTitleCard = ({
@@ -71,7 +73,8 @@ const ServiceTitleCard = ({
 }) => {
   const Icon = icon || ChevronRight;
   return (
-    <Card css={{ ...css, $$imageUrl: `url(${imagePath})` }}>
+    <Card css={{ ...css }}>
+      <StyledImage src={imagePath} layout='fill' objectFit='cover' priority alt='' />
       <Link href={path} passHref>
         <StyledLink>
           <Text as='p' type='b3' css={{ maxWidth: '204px' }}>
