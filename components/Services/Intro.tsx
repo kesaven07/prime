@@ -14,12 +14,12 @@ const ImageContainer = styled('div', {
 });
 
 const StyledObject = styled('object', {
-  width: '500px',
-  height: '300px',
+  width: '400px',
+  height: '400px',
   objectFit: 'contain',
 
   '@bp8': {
-    width: '100%',
+    width: '90%',
   },
 });
 
@@ -28,11 +28,20 @@ const Intro = ({ text, imagePath, benefits }) => {
     <Container aria-labelledby='intro_title'>
       <Layout>
         <ResponsiveFlex gapY='$9'>
-          <Text id='intro_title' as='h2' hidden>Intro</Text>
+          <Text id='intro_title' as='h2' hidden>
+            Intro
+          </Text>
           <Text
             as='p'
             type='h6'
-            css={{ flex: 1, '@bp8': { order: 2, textAlign: 'center' } }}
+            css={{
+              flex: 1,
+              '@bp8': {
+                order: 2,
+                textAlign: 'center',
+                verticalAlign: 'center',
+              },
+            }}
           >
             {text}
           </Text>
