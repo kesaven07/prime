@@ -74,7 +74,7 @@ const ServiceTitleCard = ({
   const Icon = icon || ChevronRight;
   return (
     <Card css={{ ...css }}>
-      <StyledImage src={imagePath} layout='fill' objectFit='cover' priority alt='' />
+      <StyledImage src={imagePath} layout='fill' objectFit='cover' alt='' />
       <Link href={path} passHref>
         <StyledLink>
           <Text as='p' type='b3' css={{ maxWidth: '204px' }}>

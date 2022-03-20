@@ -29,6 +29,7 @@ const HomeHero = ({
         layout='fill'
         objectFit='cover'
         priority
+        alt=''
       />
       <Layout>
         <HeroContainer
