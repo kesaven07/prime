@@ -19,6 +19,7 @@ const _TextArea = styled('div', {
     resize: 'vertical',
     lineHeight: '1.6',
     minHeight: '200px',
+    maxHeight: '400px',
 
     '&::placeholder': {
       opacity: 0,

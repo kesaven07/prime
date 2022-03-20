@@ -19,7 +19,7 @@ const Card = styled(OutlineBox, {
 
   '&:hover::before': {
     inset: '-12px',
-    opacity: 1,
+    opacity: .5,
   },
 });
 

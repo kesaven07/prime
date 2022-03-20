@@ -25,8 +25,7 @@ export default function Home() {
       <Hero />
       <LogoStrip />
       <About
-        title='Why Cybersecurity is necessary?
-'
+        title='Why Cybersecurity is necessary?'
         description='In the present-day scenario, there’s a dollar value associated with a data breach/security incident and this pushed cyber security into the board room as senior management is concerned about the security posture of their organisation.'
         services={services}
       />

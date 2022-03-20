@@ -12,7 +12,7 @@ const CardGrid = ({
 }: {
   gap?: string;
   minWidth?: string;
-  children: any;
+  children: JSX.Element|JSX.Element[];
   css?: any;
 }) => {
   return (

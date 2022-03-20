@@ -123,8 +123,8 @@ const Footer = () => {
 
   const socialIcons = social.map(({ name, url, icon }) => {
     const Icon = styled(icon, {
-      width: '32px',
-      height: '32px',
+      width: '26px',
+      height: '26px',
       fill: '$white',
     });
 

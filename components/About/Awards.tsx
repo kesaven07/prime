@@ -7,8 +7,6 @@ import CardGrid from 'elements/CardGrid';
 
 const Container = styled(SectionContainer);
 
-const AwardsContainer = styled('ul');
-
 const Awards = ({ id, title, awards }) => {
   return (
     <Container id={id}>

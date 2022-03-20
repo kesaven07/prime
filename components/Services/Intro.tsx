@@ -11,34 +11,38 @@ const Container = styled(SectionContainer, {});
 
 const ImageContainer = styled('div', {
   position: 'relative',
-  flex: .8,
-  width: '300px',
-  height: '350px',
+  flex: 0.8,
+  textAlign: 'center',
+});
+
+const StyledObject = styled('object', {
+  width: '500px',
+  height: '300px',
+  objectFit: 'contain',
+
+  '@bp8': {
+    width: '100%',
+  },
 });
 
 const Intro = ({ text, imagePath, benefits }) => {
   return (
     <Container>
       <Layout>
-        <ResponsiveFlex gapY='$1'>
+        <ResponsiveFlex gapY='$9'>
           <Text
             as='p'
             type='h6'
-            css={{ flex: 1, '@bp8': { textAlign: 'center' } }}
+            css={{ flex: 1, '@bp8': { order: 2, textAlign: 'center' } }}
           >
             {text}
           </Text>
           <ImageContainer>
-              <object
-                  type='image/svg+xml'
-                  className='image'
-                  data={imagePath}
-                  style={{
-                      width: '500px',
-                      height: '300px',
-                      objectFit: 'contain',
-                  }}
-              ></object>
+            <StyledObject
+              type='image/svg+xml'
+              className='image'
+              data={imagePath}
+            ></StyledObject>
           </ImageContainer>
         </ResponsiveFlex>
         <Benefits benefits={benefits} />

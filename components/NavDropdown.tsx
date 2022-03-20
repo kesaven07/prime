@@ -20,7 +20,7 @@ const Container = styled('div', {
   variants: {
     open: {
       true: {
-        transition: 'opacity .1s ease-out',
+        transition: 'opacity .2s ease-out',
         transform: 'translateX(-50%) scale(1)',
         opacity: 1,
       },

@@ -1,7 +1,6 @@
 import { styled } from 'stitches.config';
 import OutlineBox from 'elements/OutlineBox';
 import Flex from 'elements/Flex';
-import Image from 'next/image';
 
 const Card = styled(OutlineBox, 'span', {
   $$outlineColor: '$colors$secondary500',
@@ -9,7 +8,7 @@ const Card = styled(OutlineBox, 'span', {
   position: 'relative',
   color: '$secondary100',
   backgroundImage: '$secondaryGradient1',
-  padding: '60px 40px',
+  padding: '$10 $7',
   textAlign: 'center',
 
   '.text': {
@@ -51,8 +50,6 @@ const ImageContainer = styled('div', {
     display: 'none',
   },
 });
-
-const StyledImage = styled(Image, {});
 
 const CallToActionCard = ({
   text,

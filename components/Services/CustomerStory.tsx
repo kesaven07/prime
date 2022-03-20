@@ -16,22 +16,27 @@ const ImageContainer = styled('div', {
   },
 });
 
+const StyledObject = styled('object', {
+  width: '500px',
+  height: '300px',
+  objectFit: 'contain',
+
+  '@bp8': {
+    width: '100%',
+  },
+});
+
 const CustomerStory = ({ title, text, imagePath }) => {
   return (
     <Container>
       <Layout>
         <ResponsiveFlex equalWidth ai='center'>
           <ImageContainer>
-            <object
+            <StyledObject
                 type='image/svg+xml'
                 className='image'
                 data={imagePath}
-                style={{
-                  width: '500px',
-                  height: '300px',
-                  objectFit: 'contain',
-                }}
-            ></object>
+            ></StyledObject>
           </ImageContainer>
           <SectionCopy title={title} text={text} />
         </ResponsiveFlex>
