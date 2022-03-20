@@ -11,13 +11,13 @@ const ImageContainer = styled('div', {
   minHeight: '320px',
 
   '@bp8': {
-    width: '100%',
+    width: '80%',
   },
 });
 
 const StyledObject = styled('object', {
   width: '500px',
-  height: '300px',
+  height: '400px',
   objectFit: 'contain',
 
   '@bp8': {
