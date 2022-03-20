@@ -13,7 +13,7 @@ export default class Document extends NextDocument {
           />
         </Head>
         <body>
-          <Main />
+          <Main/>
           <NextScript />
         </body>
       </Html>

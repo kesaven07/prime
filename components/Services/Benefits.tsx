@@ -1,17 +1,14 @@
 import { styled } from 'stitches.config';
 import Layout from 'elements/Layout';
-import SectionContainer from 'elements/SectionContainer';
 import ServiceBenefitCard from 'components/ServiceBenefitCard';
-import Flex from 'elements/Flex';
 import ResponsiveFlex from 'elements/ResponsiveFlex';
+import { Text } from 'elements/Text';
 
-const Container = styled('div', {});
-
-const colors = ['$accentc500', '$accenta500', '$accente500'];
+const Container = styled('section', {});
 
 const Benefits = ({ benefits }) => {
   return (
-    <Container>
+    <Container aria-labelledby='benefits_title'>
       <Layout>
         <ResponsiveFlex
           equalWidth
@@ -19,13 +16,13 @@ const Benefits = ({ benefits }) => {
           gapY='$1'
           css={{ marginTop: '$13', '@bp8': { alignItems: 'center' } }}
         >
+          <Text id='benefits_title' as='h2' hidden>Benefits</Text>
           {benefits.map(({ title, description, icon }, i) => (
             <ServiceBenefitCard
               key={title}
               title={title}
               text={description}
               icon={icon}
-              color={colors[i]}
             />
           ))}
         </ResponsiveFlex>

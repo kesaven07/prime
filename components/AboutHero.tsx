@@ -44,10 +44,10 @@ const StyledHeader = styled('header', {
 
 const AboutHero = ({ title, subtitle, imagePath }) => {
   return (
-    <Container>
+    <Container aria-labelledby='hero_title'>
       <Layout>
         <StyledHeader>
-          <Text as='h1' type='h2' weight='bold'>
+          <Text id='hero_title' as='h1' type='h2' weight='bold'>
             {title}
           </Text>
           <Text
@@ -60,7 +60,7 @@ const AboutHero = ({ title, subtitle, imagePath }) => {
         </StyledHeader>
         <StyledArrowDown css={{ margin: '$6 0 $14' }} />
         <ImageContainer>
-          <Image src={imagePath} layout='fill' objectFit='cover' priority />
+          <Image src={imagePath} layout='fill' objectFit='cover' priority alt='About our company' />
         </ImageContainer>
       </Layout>
     </Container>

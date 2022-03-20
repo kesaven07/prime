@@ -55,8 +55,8 @@ const NavDropdownItem = ({
   });
 
   return (
-    <Link href={path}>
-      <StyledLink href={path} css={{}}>
+    <Link href={path} passHref>
+      <StyledLink>
         <Flex gap='$4' css={{ maxWidth: '360px' }}>
           {icon && <Icon />}
           <div>

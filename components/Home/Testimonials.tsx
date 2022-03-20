@@ -19,11 +19,14 @@ const CardsContainer = styled(OutlineBox, {
 
 const Testimonials = ({ title, description, testimonials }) => {
   return (
-    <Container>
+    <Container aria-labelledby='testimonials_title'>
       <Layout>
         <ResponsiveFlex gapX='$15' equalWidth>
           <CardsContainer
-            css={{ '@bp3': { alignSelf: 'flex-start' }, '@bp8': { order: 2 } }}
+            css={{
+              '@bp3': { alignSelf: 'flex-start', maxWidth: '600px' },
+              '@bp8': { order: 2 },
+            }}
           >
             <Carousel
               autoPlay
@@ -33,9 +36,11 @@ const Testimonials = ({ title, description, testimonials }) => {
               showArrows={false}
               stopOnHover={true}
               emulateTouch
+              infiniteLoop
             >
-              {testimonials.map(({ text, author, designation }) => (
+              {testimonials.map(({ text, author, designation }, i) => (
                 <TestimonialCarouselCard
+                  key={i}
                   text={text}
                   author={author}
                   designation={designation}
@@ -44,6 +49,7 @@ const Testimonials = ({ title, description, testimonials }) => {
             </Carousel>
           </CardsContainer>
           <SectionCopy
+            titleId='testimonials_title'
             title={title}
             text={description}
             color='$accenta200'

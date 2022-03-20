@@ -16,7 +16,6 @@ interface cardData {
   iconColor: string;
 }
 
-
 const Services = ({
   title,
   description,
@@ -26,19 +25,18 @@ const Services = ({
   description: string;
   cardData: cardData[];
 }) => {
-
-    const StyledHeader = styled('header', {
-        textAlign: 'center',
-        margin: '0 auto',
-        maxWidth: '896px',
-        marginBottom: '$10',
-    });
+  const StyledHeader = styled('header', {
+    textAlign: 'center',
+    margin: '0 auto',
+    maxWidth: '896px',
+    marginBottom: '$10',
+  });
 
   return (
-    <Container>
+    <Container aria-labelledby='services_title'>
       <Layout>
           <StyledHeader>
-              <Text as='h2' type='h4' css={{ marginBottom: '$4' }}>
+              <Text id='services_title' as='h2' type='h4' css={{ marginBottom: '$4' }}>
                   {title}
               </Text>
               <Text as='p' type='b1' css={{ color: '$secondary200' }}>

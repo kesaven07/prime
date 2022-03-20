@@ -19,7 +19,7 @@ const Value = ({ title, text, imagePath }) => {
       <Layout>
         <ResponsiveFlex>
           <ImageContainer css={{ flex: 1 }}>
-            <Image src={imagePath} layout='fill' objectFit='contain' />
+            <Image src={imagePath} layout='fill' objectFit='contain' alt={title}/>
           </ImageContainer>
           <SectionCopy title={title} text={text} css={{ flex: 3 }} />
         </ResponsiveFlex>

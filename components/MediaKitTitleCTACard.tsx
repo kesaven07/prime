@@ -20,10 +20,10 @@ const Card = styled(OutlineBox, {
   },
 });
 
-const MediaKitTitleCTACard = ({ title, text, buttonText, css }) => {
+const MediaKitTitleCTACard = ({ titleId, title, text, buttonText, css }) => {
   return (
     <Card css={css}>
-      <Text as='h2' type='h6' css={{ marginBottom: '$4' }}>
+      <Text id={titleId} as='h2' type='h6' css={{ marginBottom: '$4' }}>
         {title}
       </Text>
       <Text

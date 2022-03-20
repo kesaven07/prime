@@ -37,7 +37,7 @@ export const PageTransitionAnimation = () => {
     return () => {
       router.events.off('routeChangeComplete', handleRouteChangeComplete);
     };
-  }, []);
+  }, [router.events]);
 
   return (
     <AnimatePresence>

@@ -25,9 +25,10 @@ const StyledObject = styled('object', {
 
 const Intro = ({ text, imagePath, benefits }) => {
   return (
-    <Container>
+    <Container aria-labelledby='intro_title'>
       <Layout>
         <ResponsiveFlex gapY='$9'>
+          <Text id='intro_title' as='h2' hidden>Intro</Text>
           <Text
             as='p'
             type='h6'

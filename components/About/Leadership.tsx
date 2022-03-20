@@ -33,9 +33,9 @@ const Leadership = ({
   }, [selected]);
 
   return (
-    <Container id={id}>
+    <Container id={id} aria-labelledby='leadership_title'>
       <Layout>
-        <Text as='h2' type='h4' css={{ textAlign: 'center' }}>
+        <Text id='leadership_title' as='h2' type='h4' css={{ textAlign: 'center' }}>
           {title}
         </Text>
         <CardGrid minWidth='265px' gap='$9' css={{ marginTop: '$15' }}>

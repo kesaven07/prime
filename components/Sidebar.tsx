@@ -134,21 +134,29 @@ const Sidebar = ({ open, navItems }) => {
   const { hide } = useContext(SidebarContext);
 
   return (
-    <_Sidebar css={{ position: 'fixed', transform: open && 'translateX(0)' }}>
+    <_Sidebar
+      css={{ position: 'fixed', transform: open && 'translateX(0)' }}
+      aria-labelledby='sidebar_title'
+    >
+      <Text id='sidebar_title' as='h2' hidden>
+        Sidebar Navigation
+      </Text>
       <OutsideClickHandler onOutsideClick={hide}>
-        <NavList>
-          {Object.values(navItems)
-            .filter(({ navVisible }) => navVisible)
-            .map(({ name, path, children }) => (
-              <SidebarNavItem
-                onClick={hide}
-                key={name}
-                name={name}
-                path={path}
-                items={children}
-              />
-            ))}
-        </NavList>
+        <nav aria-label='Sidebar'>
+          <NavList>
+            {Object.values(navItems)
+              .filter(({ navVisible }) => navVisible)
+              .map(({ name, path, children }) => (
+                <SidebarNavItem
+                  onClick={hide}
+                  key={name}
+                  name={name}
+                  path={path}
+                  items={children}
+                />
+              ))}
+          </NavList>
+        </nav>
         <Flex
           spaceBetweenCenter
           css={{ position: 'absolute', width: '80%', bottom: '100px' }}

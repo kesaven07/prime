@@ -10,7 +10,6 @@ import Footer from 'components/Footer';
 import Testimonials from 'components/Home/Testimonials';
 import testimonials from 'data/testimonials';
 import CTA from 'components/Sections/CTA';
-import FoundersNote from 'components/Home/FoundersNote';
 
 export default function Home() {
   return (
@@ -23,7 +22,7 @@ export default function Home() {
       </Head>
       <Header />
       <Hero />
-      <LogoStrip />
+      <LogoStrip title='Our Clients'/>
       <About
         title='Why Cybersecurity is necessary?'
         description='In the present-day scenario, there’s a dollar value associated with a data breach/security incident and this pushed cyber security into the board room as senior management is concerned about the security posture of their organisation.'

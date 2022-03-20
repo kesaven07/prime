@@ -141,14 +141,15 @@ const Header = () => {
   });
 
   return (
-    <Container>
+    <Container aria-labelledby='header_title'>
       <Flex spaceBetweenCenter>
+        <Text id='header_title' as='p' hidden>Header</Text>
         <Link href='/'>
-          <a>
+          <a title='PrimeFort Logo'>
             <StyledLogoFull />
           </a>
         </Link>
-        <Nav>
+        <Nav aria-label='Main'>
           <Flex
             as='ul'
             spaceBetweenCenter

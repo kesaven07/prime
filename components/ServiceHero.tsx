@@ -46,7 +46,7 @@ const StyledBackgroundImage = styled('span', {
 
 const ServiceHero = ({ title, description, imagePath }) => {
   return (
-    <Container>
+    <Container aria-labelledby='service_title'>
       <StyledBackgroundImage>
         <Image src={imagePath} objectFit='cover' layout='fill' priority alt=''/>
       </StyledBackgroundImage>
@@ -61,7 +61,7 @@ const ServiceHero = ({ title, description, imagePath }) => {
           >
             Services /
           </Text>
-          <Text as='h1' type='h1' weight='bold' css={{ margin: '0 0 $5' }}>
+          <Text id='service_title' as='h1' type='h1' weight='bold' css={{ margin: '0 0 $5' }}>
             {title}
           </Text>
           <Text

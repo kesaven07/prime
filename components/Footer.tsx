@@ -109,6 +109,10 @@ const StyledLink = styled('a', {
   },
 });
 
+const InfoContainer = styled('div');
+
+const ContactContainer = styled('div');
+
 const Footer = () => {
   const StyledLogoFull = styled(LogoFull, {
     fill: '$white',
@@ -139,18 +143,22 @@ const Footer = () => {
 
   return (
     <Layout css={{}}>
-      <Container>
-        <Link href='/'>
-          <a>
-            <StyledLogoFull css={{ marginBottom: '$3' }} />
-          </a>
-        </Link>
+      <Container aria-labelledby='footer_title'>
+        <Text id='footer_title' as='h2' hidden>
+          Footer
+        </Text>
+
         <Flex
           gap='$12'
           jc='space-between'
           css={{ '@bp6': { flexDirection: 'column' } }}
         >
-          <div>
+          <InfoContainer>
+            <Link href='/'>
+              <a>
+                <StyledLogoFull css={{ marginBottom: '$3' }} />
+              </a>
+            </Link>
             <ContactDetailList>
               <div data-vertical className='group'>
                 <dd>
@@ -166,19 +174,20 @@ const Footer = () => {
                 </dd>
               </div>
             </ContactDetailList>
-          </div>
-          <ServicesContainer css={{ marginTop: -70, width: '33rem' }}>
+          </InfoContainer>
+
+          <ServicesContainer css={{ width: '33rem' }}>
             <FooterHeading
               as='h3'
               css={{ marginBottom: '$space$4', fontSize: '14px' }}
             >
               Services
             </FooterHeading>
-            <FooterLinkList>
+            <FooterLinkList aria-label='Footer Services'>
               {Object.values(services).map(({ title, path }) => (
                 <li key={path}>
-                  <Link href={path}>
-                    <StyledLink href={path}>
+                  <Link href={path} passHref>
+                    <StyledLink>
                       <Text type='b6'>{title}</Text>
                     </StyledLink>
                   </Link>
@@ -186,18 +195,19 @@ const Footer = () => {
               ))}
             </FooterLinkList>
           </ServicesContainer>
-          <AboutContainer css={{ marginTop: -70, width: '13rem' }}>
+
+          <AboutContainer css={{ width: '13rem' }}>
             <FooterHeading
               as='h3'
               css={{ marginBottom: '$space$4', fontSize: '14px' }}
             >
               About Us
             </FooterHeading>
-            <FooterLinkList>
+            <FooterLinkList aria-label='Footer About Us'>
               {Object.values(about).map(({ title, path }) => (
                 <li key={title}>
-                  <Link href={path}>
-                    <StyledLink href={path}>
+                  <Link href={path} passHref>
+                    <StyledLink>
                       <Text type='b6'>{title}</Text>
                     </StyledLink>
                   </Link>
@@ -205,7 +215,8 @@ const Footer = () => {
               ))}
             </FooterLinkList>
           </AboutContainer>
-          <div style={{ marginTop: '-70px' }}>
+
+          <ContactContainer>
             <Button
               href={pages.contact.path}
               small
@@ -236,7 +247,7 @@ const Footer = () => {
                   </Text>
                 </dd>
               </div>
-              <div data-horizontal className='group'>
+              <div data-vertical className='group'>
                 <FooterHeading
                   as='dt'
                   css={{ marginBottom: '$space$4', fontSize: '14px' }}
@@ -250,8 +261,9 @@ const Footer = () => {
                 </dd>
               </div>
             </ContactDetailList>
-          </div>
+          </ContactContainer>
         </Flex>
+
         <div style={{ whiteSpace: 'nowrap' }}>
           <Text as='p' type='b6' css={{ marginTop: '$3', textAlign: 'center' }}>
             <Link href='#'>
@@ -259,6 +271,7 @@ const Footer = () => {
             </Link>
           </Text>
         </div>
+
         <Text as='p' type='b6' css={{ marginTop: '$3', textAlign: 'center' }}>
           © Copyright - Primefort
         </Text>

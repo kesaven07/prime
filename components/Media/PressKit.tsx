@@ -33,12 +33,13 @@ const PressKit = ({ title, downloadPath }) => {
   );
 
   return (
-    <Container>
+    <Container aria-labelledby='media_title'>
       <Layout
         type={{ '@bp6': 'fullWidth' }}
         css={{ position: 'relative', maxWidth: '920px', margin: '0 auto' }}
       >
         <Text
+          id='media_title'
           as='h1'
           type='h1'
           weight='bold'

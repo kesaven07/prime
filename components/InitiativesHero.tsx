@@ -29,12 +29,12 @@ const ImageContainer = styled('div', {
 
 const InitiativesHero = ({ title, imagePath }) => {
   return (
-    <Container>
+    <Container aria-labelledby='hero_title'>
       <Layout>
         <InnerContainer>
           <Flex gap='$12' spaceBetweenCenter>
             <header>
-              <Text as='h1' type='h1' weight='bold' css={{ margin: '0 0 $9' }}>
+              <Text id='hero_title' as='h1' type='h1' weight='bold' css={{ margin: '0 0 $9' }}>
                 {title}
               </Text>
               <Button

@@ -2,6 +2,7 @@ import { styled } from 'stitches.config';
 import Layout from 'elements/Layout';
 import SectionContainer from 'elements/SectionContainer';
 import InitiativeStatCard from 'components/InitiativeStatCard';
+import { Text } from 'elements/Text';
 
 const Container = styled(SectionContainer, {});
 
@@ -38,11 +39,12 @@ const CardsContainer = styled('div', {
 
 const Stats = ({ stats }) => {
   return (
-    <Container>
+    <Container aria-labelledby='stats_title'>
       <Layout
         type={{ '@initial': 'fixed', '@bp2': 'fullWidth' }}
         css={{ overflow: 'hidden' }}
       >
+        <Text id='stats_title' as='h2' hidden>Stats</Text>
         <CardsContainer>
           <InitiativeStatCard
             title={stats[0].title}

@@ -14,10 +14,10 @@ const Header = styled('header', {
 
 const Values = ({ title, values }) => {
   return (
-    <Container>
+    <Container aria-labelledby='values_title'>
       <Layout>
         <Header>
-          <SectionCopy center title={title} css={{ color: '$accenta400' }} />
+          <SectionCopy titleId='values_title' center title={title} css={{ color: '$accenta400' }} />
         </Header>
         <CardGrid css={{ marginTop: '$12', '@bp2': { gap: '$5' } }}>
           {values.map(({ title, text }) => (

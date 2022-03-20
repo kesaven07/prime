@@ -7,9 +7,10 @@ const Container = styled(SectionContainer, {});
 
 const Media = ({ title, text, buttonText }) => {
   return (
-    <Container>
+    <Container aria-labelledby='media_kit_title'>
       <Layout>
         <MediaKitTitleCTACard
+          titleId='media_kit_title'
           title={title}
           text={text}
           buttonText={buttonText}

@@ -21,13 +21,14 @@ const CTA = ({
   showButton?: boolean;
 }) => {
   return (
-    <Container css={css}>
+    <Container aria-labelledby='CTA_title' css={css}>
       <Layout type={{ '@initial': 'fullWidth', '@bp2': 'fixed' }}>
         <CallToActionCard
           text={
             <Text
+              id='CTA_title'
               className='text'
-              as='p'
+              as='h2'
               type='b1'
               css={{
                 marginBottom: '42px',

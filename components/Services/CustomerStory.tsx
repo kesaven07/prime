@@ -27,17 +27,21 @@ const StyledObject = styled('object', {
 
 const CustomerStory = ({ title, text, imagePath }) => {
   return (
-    <Container>
+    <Container aria-labelledby='customer_story_title'>
       <Layout>
         <ResponsiveFlex equalWidth ai='center'>
           <ImageContainer>
             <StyledObject
-                type='image/svg+xml'
-                className='image'
-                data={imagePath}
+              type='image/svg+xml'
+              className='image'
+              data={imagePath}
             ></StyledObject>
           </ImageContainer>
-          <SectionCopy title={title} text={text} />
+          <SectionCopy
+            titleId='customer_story_title'
+            title={title}
+            text={text}
+          />
         </ResponsiveFlex>
       </Layout>
     </Container>

@@ -28,10 +28,11 @@ const Card = styled('div', {
 
 const ServiceHomeCard = ({ title, text, icon, number, iconColor }) => {
   const Icon = icon;
+
   return (
     <Card css={{ $$iconColor: iconColor && '$colors' + iconColor }}>
       <Flex spaceBetweenCenter>
-        <Icon />
+        <Icon alt={title}/>
         <Text type='b1' weight='bold' css={{ color: '$primary500' }}>
           {number}
         </Text>

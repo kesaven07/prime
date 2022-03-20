@@ -8,9 +8,10 @@ const Container = styled(SectionContainer, {});
 
 const Intro = ({ textLeft, textRight }) => {
   return (
-    <Container>
+    <Container aria-labelledby='intro_title'>
       <Layout>
         <ResponsiveFlex gapX='$10' equalWidth>
+          <Text id='intro_title' as='h2' hidden>Intro</Text>
           <Text type='b1' as='p'>
             {textLeft}
           </Text>

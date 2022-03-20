@@ -53,7 +53,7 @@ const FoundersNote = ({ title, text, imagePath }) => {
         <ResponsiveFlex equalWidth gapX='0'>
           <Flex center={{ '@initial': false, '@bp3': true }}>
             <ImageContainer>
-              <Image src={imagePath} layout='fill' />
+              <Image src={imagePath} layout='fill' alt='Image of the founder'/>
             </ImageContainer>
           </Flex>
           <ResponsiveFlex gapX='$10' gapY='$5' css={{ '@bp9': { flex: 2 } }}>

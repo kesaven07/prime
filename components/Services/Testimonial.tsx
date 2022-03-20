@@ -30,10 +30,11 @@ const Footer = styled('footer', {
 
 const Testimonial = ({ text, author, designation, imagePath }) => {
   return (
-    <Container>
+    <Container aria-labelledby='testimonial_title'>
       <Layout as='figure' css={{ paddingTop: '$16', paddingBottom: '$16' }}>
+        <Text id='testimonial_title' as='h2' hidden>Testimonial</Text>
         <ProfileImage>
-          <Image src={imagePath} layout='fill' />
+          <Image src={imagePath} layout='fill' alt={`Picture of ${author}`}/>
         </ProfileImage>
         <Text
           as='blockquote'

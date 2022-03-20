@@ -21,7 +21,7 @@ const HomeHero = ({
   button: JSX.Element;
 }) => {
   return (
-    <Container>
+    <Container aria-labelledby='hero_title'>
       <Layout>
         <HeroContainer
           css={{
@@ -29,7 +29,7 @@ const HomeHero = ({
             margin: '0 auto',
           }}
         >
-          <Text as='h1' type='h1' weight='bold' css={{ margin: '0 auto $5' }}>
+          <Text id='hero_title' as='h1' type='h1' weight='bold' css={{ margin: '0 auto $5' }}>
             {title()}
           </Text>
           <Text

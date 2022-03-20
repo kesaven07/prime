@@ -16,6 +16,7 @@ const Container = styled('div', {
 });
 
 const SectionCopy = ({
+  titleId,
   title,
   text,
   color = '$secondary200',
@@ -23,6 +24,7 @@ const SectionCopy = ({
   center,
   css,
 }: {
+  titleId?: string;
   title?: string;
   text?: string;
   color?: string;
@@ -33,7 +35,7 @@ const SectionCopy = ({
   return (
     <Container center={center} css={css}>
       {title && (
-        <Text type='h4' weight='bold' as={hlevel} css={{ marginBottom: '$5' }}>
+        <Text id={titleId} type='h4' weight='bold' as={hlevel} css={{ marginBottom: '$5' }}>
           {title}
         </Text>
       )}

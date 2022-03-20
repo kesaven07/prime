@@ -42,10 +42,10 @@ const About = ({
   });
 
   return (
-    <Container>
+    <Container aria-labelledby='about_title'>
       <Layout>
         <StyledHeader>
-          <Text as='h2' type='h4' css={{ marginBottom: '$4' }}>
+          <Text id='about_title' as='h2' type='h4' css={{ marginBottom: '$4' }}>
             {title}
           </Text>
           <Text as='p' type='b1' css={{ color: '$secondary200' }}>

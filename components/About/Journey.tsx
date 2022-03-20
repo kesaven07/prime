@@ -44,9 +44,9 @@ const Timeline = styled(Flex, {
 
 const Journey = ({ title, textLeft, textRight, id }) => {
   return (
-    <Container id={id}>
+    <Container id={id} aria-labelledby='journey_title'>
       <Layout css={{ overflow: 'hidden' }}>
-        <Text as='h2' type='h4' css={{ textAlign: 'center' }}>
+        <Text id='journey_title' as='h2' type='h4' css={{ textAlign: 'center' }}>
           {title}
         </Text>
         <Flex

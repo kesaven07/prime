@@ -11,9 +11,15 @@ const Container = styled('a', {
   alignItems: 'center',
   gap: '1em',
   cursor: 'pointer',
+  transition: 'all .2s linear',
   border: 'none',
 
   $$color: 'CurrentColor',
+
+  '&:hover': {
+    color: '$secondary200',
+    transition: 'all .2s ease-out',
+  },
 
   variants: {
     border: {
@@ -26,6 +32,11 @@ const Container = styled('a', {
           top: -1,
           left: -5,
           backgroundColor: 'CurrentColor',
+        },
+        '&:hover': {
+          backgroundColor: '$secondary100',
+          color: '$secondary800',
+          transition: 'all .2s ease-out',
         },
       },
     },

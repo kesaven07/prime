@@ -9,28 +9,6 @@ import { logoScroll } from 'stitches.config/keyframes';
 
 const Container = styled(SectionContainer, {});
 
-const ImageGridContainer = styled('div', {
-  position: 'relative',
-  minHeight: '300px',
-  maxHeight: '500px',
-});
-
-const ImageGrid = styled('div', {
-  position: 'absolute',
-  top: '50%',
-  transform: 'translateY(-50%)',
-  width: '80%',
-  minHeight: '120%',
-  display: 'grid',
-  gap: '$5',
-  gridTemplate: 'repeat(4, 1fr) / repeat(3, 1fr)',
-});
-
-const ImageContainer = styled('div', {
-  position: 'relative',
-  width: '100%',
-});
-
 const ScrollContainer = styled('div', {
   display: 'flex',
   overflow: 'hidden',
@@ -46,35 +24,19 @@ const LogoContainer = styled('div', {
   },
 });
 
-const imageGridRowPositions = [
-  '1 / 2',
-  '2 / 3',
-  '3 / 4',
-  '4 / 5',
-  '3 / 4',
-  '2 / 3',
-];
-const imageGridColumnPositions = [
-  '2 / 3',
-  '3 / 4',
-  '3 / 4',
-  '2 / 3',
-  '1 / 2',
-  '1 / 2',
-];
-
 const Partner = ({ id, title, text1, text2, collegeData }) => {
   const bodyCopy =
     text2 +
     '\n' +
     collegeData.map((college) => college.name).join(', ') +
     ', and many more';
+
   return (
-    <Container id={id}>
+    <Container id={id} aria-labelledby='partners_title'>
       <Layout>
         <ResponsiveFlex equalWidth>
           <ResponsiveFlex gapY='$5'>
-            <SectionCopy title={title} text={text1} />
+            <SectionCopy titleId='partners_title' title={title} text={text1} />
             <SectionCopy text={bodyCopy} />
           </ResponsiveFlex>
         </ResponsiveFlex>

@@ -68,8 +68,12 @@ const ContactInfo = styled('div', {
 });
 
 const contactInfo = [
-  { icon: Contact, info: contact.emails.info },
-  { icon: location, info: contact.location.chennai.address },
+  { icon: Contact, info: contact.emails.info, link: contact.emails.info },
+  {
+    icon: location,
+    info: contact.location.chennai.address,
+    link: contact.location.chennai.locationLink,
+  },
 ];
 
 const ContactForm = ({ title, description, backgroundImagePath }) => {
@@ -79,11 +83,12 @@ const ContactForm = ({ title, description, backgroundImagePath }) => {
         backgroundImage: `linear-gradient(90deg, $primary900_85, $primary900_85), url(${backgroundImagePath})`,
         backgroundSize: 'cover',
       }}
+      aria-labelledby='contact_form_title'
     >
       <Layout type={{ '@bp6': 'fullWidth' }}>
         <InnerContainer equalWidth>
           <LeftContainer css={{ padding: '$5 $5' }}>
-            <Text as='h1' type='h6'>
+            <Text id='contact_form_title' as='h1' type='h6'>
               {title}
             </Text>
             <ParagraphText
@@ -104,7 +109,14 @@ const ContactForm = ({ title, description, backgroundImagePath }) => {
                 return (
                   <ContactInfo key={contact.info} css={{ marginTop: '$4' }}>
                     <Icon />
-                    <Text type='b4'>{contact.info}</Text>
+                    <Text
+                      as='a'
+                      href={contact.link}
+                      type='b4'
+                      css={{ color: '$secondary100' }}
+                    >
+                      {contact.info}
+                    </Text>
                   </ContactInfo>
                 );
               })}

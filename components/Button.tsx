@@ -13,8 +13,14 @@ const Container = styled('a', {
   gap: '1em',
   cursor: 'pointer',
   border: 'none',
-  transition: 'all .4s linear',
+  transition: 'all .2s linear',
+
   $$color: 'CurrentColor',
+
+  '&:hover': {
+    color: '$secondary200',
+    transition: 'all .2s ease-out',
+  },
 
   variants: {
     border: {
@@ -27,6 +33,11 @@ const Container = styled('a', {
           top: -1,
           left: -5,
           backgroundColor: 'CurrentColor',
+        },
+        '&:hover': {
+          backgroundColor: '$secondary100',
+          color: '$secondary800',
+          transition: 'all .2s ease-out',
         },
       },
     },
@@ -60,12 +71,6 @@ const Container = styled('a', {
       },
     },
   },
-
-  '&:hover': {
-    backgroundColor: '$secondary100',
-    color: '$secondary800',
-    transition: 'all .2s ease-out',
-  },
 });
 
 type ButtonProps = {
@@ -92,14 +97,13 @@ export const Button = ({
   const Icon = icon;
 
   return (
-    <Link href={href}>
+    <Link href={href} passHref>
       <Container
         border={border}
         icon={!!icon}
         underline={underline}
         small={small}
         css={{ ...css, color }}
-        href={href}
       >
         {border && <span className='leftLine'></span>}
         <Text

@@ -27,17 +27,18 @@ const Features = ({ title, description, features }) => {
         return { ...item, selected: i === index };
       })
     );
-  }, []);
+  }, [featuresList]);
 
   useEffect(() => {
     setSelectedFeature(featuresList.filter(({ selected }) => selected)[0]);
   }, [featuresList]);
 
   return (
-    <Container>
+    <Container aria-labelledby='features_title'>
       <Layout type={{ '@initial': 'fullWidth', '@bp2': 'fixed' }}>
         <header>
           <SectionCopy
+            titleId='features_title'
             title={title}
             text={description}
             css={{

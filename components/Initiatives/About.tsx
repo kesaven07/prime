@@ -26,11 +26,11 @@ const StyledImage = styled(Image, {});
 
 const About = ({ id, title, description, imagePath }) => {
   return (
-    <Container id={id}>
+    <Container id={id} aria-labelledby='about_title'>
       <Layout>
         <ResponsiveFlex>
           <TextContainer css={{ flex: 2, '@bp8': { order: 2 } }}>
-            <Text as='h2' type='h2' weight='bold'>
+            <Text id='about_title' as='h2' type='h2' weight='bold'>
               {title}
             </Text>
             <Text as='p' type='b2' css={{ marginTop: '$6' }}>

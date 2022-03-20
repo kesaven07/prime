@@ -26,7 +26,7 @@ const DecoBox = styled('div', {
 });
 
 const Content = styled('div', {
-  backgroundImage: '$primaryGradient7, url(images/initiatives_cta_bg.jpg)',
+  backgroundImage: '$primaryGradient7, url(/images/initiatives_cta_bg.jpg)',
   padding: '$21 0 $21 $20',
   backgroundSize: 'cover',
 
@@ -37,11 +37,12 @@ const Content = styled('div', {
 
 const CTA = ({ title, text, button }) => {
   return (
-    <Container>
+    <Container aria-labelledby='CTA_title'>
       <StyledLayout type='fullWidth'>
         <DecoBox />
         <Content>
           <Text
+            id='CTA_title'
             as='h2'
             type='h2'
             weight='bold'

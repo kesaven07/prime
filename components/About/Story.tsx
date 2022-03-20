@@ -33,7 +33,7 @@ const StyledImage = styled(Image, {});
 
 const Story = ({ id, title, text, imagePaths }) => {
   return (
-    <Container id={id}>
+    <Container id={id} aria-labelledby='story_title'>
       <Layout type='fullWidth'>
         <ResponsiveFlex gapX='$14'>
           <ImageGrid>
@@ -49,7 +49,7 @@ const Story = ({ id, title, text, imagePaths }) => {
               </ImageContainer>
             ))}
           </ImageGrid>
-          <SectionCopy title={title} text={text} css={{ margin: '0 28px' }} />
+          <SectionCopy titleId='story_title' title={title} text={text} css={{ margin: '0 28px' }} />
         </ResponsiveFlex>
       </Layout>
     </Container>

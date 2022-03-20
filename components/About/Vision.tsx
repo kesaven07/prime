@@ -19,11 +19,11 @@ const StyledImage = styled(Image, {
 
 const Vision = ({ title, text, imagePath, id }) => {
   return (
-    <Container id={id}>
+    <Container id={id} aria-labelledby='vision_title'>
       <Layout>
         <ResponsiveFlex ai='center'>
           <TextContainer css={{ '@bp8': { order: 2 } }}>
-            <Text type='h4' as='h2' css={{ marginBottom: '$5' }}>
+            <Text id='vision_title' type='h4' as='h2' css={{ marginBottom: '$5' }}>
               {title}
             </Text>
             <ParagraphText type='b1' color='$primary200'>

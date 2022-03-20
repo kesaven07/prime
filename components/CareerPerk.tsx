@@ -12,7 +12,7 @@ const CareerPerk = ({ text, imagePath }) => {
   return (
     <Card>
       <ImageContainer css={{ marginBottom: '$5' }}>
-        <Image src={imagePath} width='82' height='66' />
+        <Image src={imagePath} width='82' height='66' alt={text} />
       </ImageContainer>
       <Text type='b3' css={{ color: '$secondary200' }}>
         {text}

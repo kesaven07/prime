@@ -23,9 +23,9 @@ const LogoContainer = styled('div', {
   }
 });
 
-const LogoStrip = () => {
+const LogoStrip = ({ title }) => {
   return (
-    <Container>
+    <Container aria-labelledby='logo_strip_title'>
       <Layout
         css={{
           overflow: 'hidden',
@@ -35,8 +35,8 @@ const LogoStrip = () => {
           '@bp2': { flexDirection: 'row', gap: '$17' },
         }}
       >
-        <Text type='b4' css={{ flexShrink: 0, color: '$primary200', alignSelf: 'center' }}>
-          Our Clients
+        <Text id='logo_strip_title' as='h2' type='b4' css={{ flexShrink: 0, color: '$primary200', alignSelf: 'center' }}>
+          {title}
         </Text>
         <ScrollContainer>
           <Flex
@@ -54,6 +54,7 @@ const LogoStrip = () => {
                 layout='fixed'
                 priority={true}
                 src='/images/clients/comp2.png'
+                alt='Company Logo'
               />
             </LogoContainer>
             <LogoContainer>
@@ -63,6 +64,7 @@ const LogoStrip = () => {
                 layout='fixed'
                 priority={true}
                 src='/images/clients/comp4.png'
+                alt='Company Logo'
               />
             </LogoContainer>
             <LogoContainer>
@@ -72,6 +74,7 @@ const LogoStrip = () => {
                 layout='fixed'
                 priority={true}
                 src='/images/clients/comp5.png'
+                alt='Company Logo'
               />
             </LogoContainer>
             <LogoContainer>
@@ -81,6 +84,7 @@ const LogoStrip = () => {
                 layout='fixed'
                 priority={true}
                 src='/images/clients/comp6.png'
+                alt='Company Logo'
               />
             </LogoContainer>
             <LogoContainer>
@@ -90,6 +94,7 @@ const LogoStrip = () => {
                 layout='fixed'
                 priority={true}
                 src='/images/clients/comp2.png'
+                alt='Company Logo'
               />
             </LogoContainer>
             <LogoContainer>
@@ -99,6 +104,7 @@ const LogoStrip = () => {
                 layout='fixed'
                 priority={true}
                 src='/images/clients/comp4.png'
+                alt='Company Logo'
               />
             </LogoContainer>
             <LogoContainer>
@@ -108,6 +114,7 @@ const LogoStrip = () => {
                 layout='fixed'
                 priority={true}
                 src='/images/clients/comp5.png'
+                alt='Company Logo'
               />
             </LogoContainer>
             <LogoContainer>
@@ -117,6 +124,7 @@ const LogoStrip = () => {
                 layout='fixed'
                 priority={true}
                 src='/images/clients/comp6.png'
+                alt='Company Logo'
               />
             </LogoContainer>
           </Flex>

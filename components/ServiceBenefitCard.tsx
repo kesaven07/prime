@@ -17,12 +17,10 @@ const ServiceBenefitCard = ({
   icon,
   title,
   text,
-  color,
 }: {
   icon: any;
   title: string;
   text: string;
-  color: string;
 }) => {
   const Icon = styled(icon);
 
@@ -32,7 +30,6 @@ const ServiceBenefitCard = ({
         className='image'
         width='60px'
         height='60px'
-        css={{ fill: color }}
       />
       <Text
         as='h2'
