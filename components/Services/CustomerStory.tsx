@@ -11,7 +11,7 @@ const ImageContainer = styled('div', {
   minHeight: '320px',
 
   '@bp8': {
-    width: '80%',
+    width: '95%',
   },
 });
 
