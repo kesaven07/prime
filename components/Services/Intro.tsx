@@ -2,10 +2,8 @@ import { styled } from 'stitches.config';
 import Layout from 'elements/Layout';
 import SectionContainer from 'elements/SectionContainer';
 import ResponsiveFlex from 'elements/ResponsiveFlex';
-import Image from 'next/image';
 import { Text } from 'elements/Text';
 import Benefits from './Benefits';
-import services from 'data/services';
 
 const Container = styled(SectionContainer, {});
 
