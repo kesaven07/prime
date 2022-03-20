@@ -68,7 +68,7 @@ const ContactInfo = styled('div', {
 });
 
 const contactInfo = [
-  { icon: Contact, info: contact.emails.info, link: contact.emails.info },
+  { icon: Contact, info: contact.emails.info, link: `mailto:${contact.emails.info}` },
   {
     icon: location,
     info: contact.location.chennai.address,
