@@ -134,7 +134,7 @@ const Footer = () => {
 
     return (
       <li key={url}>
-        <a href={url}>
+        <a href={url} aria-label={name}>
           <Icon alt={name} />
         </a>
       </li>
@@ -155,7 +155,7 @@ const Footer = () => {
         >
           <InfoContainer>
             <Link href='/'>
-              <a>
+              <a aria-label='Home'>
                 <StyledLogoFull css={{ marginBottom: '$3' }} />
               </a>
             </Link>

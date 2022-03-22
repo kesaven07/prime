@@ -55,6 +55,7 @@ const InitiativesHero = ({ title, imagePath }) => {
                     height: '300px',
                     objectFit: 'contain',
                   }}
+                  aria-label=''
               ></object>
             </ImageContainer>
           </Flex>

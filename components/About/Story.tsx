@@ -45,7 +45,7 @@ const Story = ({ id, title, text, imagePaths }) => {
                   gridColumn: imageGridColumnPositions[i],
                 }}
               >
-                <StyledImage src={imagePath} layout='fill' objectFit='cover' />
+                <StyledImage src={imagePath} layout='fill' objectFit='cover' alt=''/>
               </ImageContainer>
             ))}
           </ImageGrid>

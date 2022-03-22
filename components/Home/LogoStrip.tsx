@@ -50,7 +50,7 @@ const LogoStrip = ({ title }) => {
             <LogoContainer>
               <Image
                 width='64px'
-                height='23px'
+                height='26px'
                 layout='fixed'
                 priority={true}
                 src='/images/clients/comp2.png'
@@ -70,7 +70,7 @@ const LogoStrip = ({ title }) => {
             <LogoContainer>
               <Image
                 width='64px'
-                height='27px'
+                height='34px'
                 layout='fixed'
                 priority={true}
                 src='/images/clients/comp5.png'
@@ -80,7 +80,7 @@ const LogoStrip = ({ title }) => {
             <LogoContainer>
               <Image
                 width='64px'
-                height='34px'
+                height='27px'
                 layout='fixed'
                 priority={true}
                 src='/images/clients/comp6.png'
@@ -90,7 +90,7 @@ const LogoStrip = ({ title }) => {
             <LogoContainer>
               <Image
                 width='64px'
-                height='23px'
+                height='26px'
                 layout='fixed'
                 priority={true}
                 src='/images/clients/comp2.png'
@@ -110,7 +110,7 @@ const LogoStrip = ({ title }) => {
             <LogoContainer>
               <Image
                 width='64px'
-                height='27px'
+                height='34px'
                 layout='fixed'
                 priority={true}
                 src='/images/clients/comp5.png'
@@ -120,7 +120,7 @@ const LogoStrip = ({ title }) => {
             <LogoContainer>
               <Image
                 width='64px'
-                height='34px'
+                height='27px'
                 layout='fixed'
                 priority={true}
                 src='/images/clients/comp6.png'

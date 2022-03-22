@@ -91,7 +91,7 @@ const SidebarNavItem = ({ name, path, items, onClick }) => {
                 </a>
               </Link>
             </NavItem>
-            <StyledTrigger onClick={() => setIsOpen((state) => !state)}>
+            <StyledTrigger aria-label='Toggle Dropdown' onClick={() => setIsOpen((state) => !state)}>
               <StyledIcon open={isOpen} />
             </StyledTrigger>
           </StyledHeader>

@@ -50,6 +50,7 @@ const Intro = ({ text, imagePath, benefits }) => {
               type='image/svg+xml'
               className='image'
               data={imagePath}
+              aria-label='Decorative image'
             ></StyledObject>
           </ImageContainer>
         </ResponsiveFlex>

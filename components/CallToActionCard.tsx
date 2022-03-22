@@ -90,6 +90,7 @@ const CallToActionCard = ({
                 height: '300px',
                 objectFit: 'contain',
               }}
+              aria-label=''
             ></object>
           </ImageContainer>
         )}

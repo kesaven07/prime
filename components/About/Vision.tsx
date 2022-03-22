@@ -35,6 +35,7 @@ const Vision = ({ title, text, imagePath, id }) => {
             width='462px'
             height='300px'
             objectFit='contain'
+            alt=''
           />
         </ResponsiveFlex>
       </Layout>

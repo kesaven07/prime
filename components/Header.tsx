@@ -152,8 +152,8 @@ const Header = () => {
       <Flex spaceBetweenCenter>
         <Text id='header_title' as='p' hidden>Header</Text>
         <Link href='/'>
-          <a title='PrimeFort Logo'>
-            <StyledLogoFull />
+          <a aria-label='Home'>
+            <StyledLogoFull alt='PrimeFort Logo' />
           </a>
         </Link>
         <Nav aria-label='Main'>
@@ -195,6 +195,7 @@ const Header = () => {
             '@bp2': { marginRight: '$5' },
             '@bp4': { display: 'none' },
           }}
+          aria-label='Toggle Sidebar'
         >
           <HamburgerMenuIcon width='32px' height='32px' />
         </HamburgerMenu>

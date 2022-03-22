@@ -46,7 +46,7 @@ const ServiceCardSwitcher = ({ features, handleClick, css }) => {
       <List>
         {features.map((feature, index) => (
           <ListItem
-            tabIndex={1}
+            tabIndex={0}
             selected={feature.selected}
             onClick={() => handleClick(index)}
             key={feature.title}

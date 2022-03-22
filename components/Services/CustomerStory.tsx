@@ -35,6 +35,7 @@ const CustomerStory = ({ title, text, imagePath }) => {
               type='image/svg+xml'
               className='image'
               data={imagePath}
+              aria-label={title}
             ></StyledObject>
           </ImageContainer>
           <SectionCopy
