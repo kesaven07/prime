@@ -50,8 +50,6 @@ const HamburgerMenu = styled('button', {
   cursor: 'pointer',
 });
 
-const StyledExternalLink = styled('a');
-
 const StyledListItem = styled('li', {
   position: 'relative',
   cursor: 'pointer',
@@ -77,7 +75,16 @@ const StyledListItem = styled('li', {
 
 const NavListItem = ({ name, path, dropdownItems, isExternal }) => {
   const [isOpen, setIsOpen] = useState(false);
-  const NavLink = isExternal ? StyledExternalLink : Link;
+
+  if (isExternal) {
+    return (
+      <StyledListItem>
+        <Text type='b4' lineHeight100 as='a' href={path}>
+          {name}
+        </Text>
+      </StyledListItem>
+    );
+  }
 
   return (
     <StyledListItem
@@ -85,12 +92,11 @@ const NavListItem = ({ name, path, dropdownItems, isExternal }) => {
       onMouseLeave={() => setIsOpen(false)}
       key={path}
     >
-      <NavLink href={path} >
+      <Link href={path} passHref>
         <Text
           type='b4'
           lineHeight100
           as='a'
-          href={path}
           css={{
             position: 'relative',
             ...(isOpen && {
@@ -108,7 +114,8 @@ const NavListItem = ({ name, path, dropdownItems, isExternal }) => {
         >
           {name}
         </Text>
-      </NavLink>
+      </Link>
+
       {dropdownItems && (
         <NavDropdown open={isOpen}>
           {dropdownItems.map(({ title, path, description, icon }) => (

@@ -9,8 +9,11 @@ const Container = styled('section', {
   position: 'relative',
 });
 
-const StyledImage = styled(Image, {
+const ImageContainer = styled('div', {
+  position: 'absolute',
+  inset: 0,
   transform: 'translateY(10rem)',
+  zIndex: -1,
 });
 
 const HomeHero = ({
@@ -24,13 +27,15 @@ const HomeHero = ({
 }) => {
   return (
     <Container aria-labelledby='hero_title'>
-      <StyledImage
-        src='/images/home_hero_bg.png'
-        layout='fill'
-        objectFit='cover'
-        priority
-        alt=''
-      />
+      <ImageContainer>
+        <Image
+          src='/images/home_hero_bg.png'
+          layout='fill'
+          objectFit='cover'
+          priority
+          alt=''
+        />
+      </ImageContainer>
       <Layout>
         <HeroContainer
           css={{

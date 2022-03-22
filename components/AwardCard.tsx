@@ -26,6 +26,7 @@ const AwardCard = ({ title, imagePath }) => {
         <Image
           src={imagePath}
           loader={() => imagePath}
+          unoptimized
           alt='award_photo'
           layout='fill'
           objectFit='contain'
